@@ -1,0 +1,38 @@
+---
+title: "Intro to R Markdown"
+output: html_document
+---
+
+
+## R Markdown
+
+This file type is called R Markdown. It allows you to both do data analysis with R *and* write up the process, results, etc. The file can be compiled into a nice-looking document, great for sharing results (and submitting assignments). For now, we'll knit to HTML documents for simplicity. Eventually, we'll knit to PDF format as well.
+
+The main components of an R Markdown file are the header (at the very top), markdown text (regular writing like this paragraph), and code chunks (where we write R code to conduct analyses). Here is a code chunk example:
+
+```{r}
+# lines that start with a '#' are comments, used to describe code
+
+# create an object called mean_1_5, which is the mean of the integers 1-5:
+mean_1_5 <- mean(1:5) 
+
+# output the newly-created mean_1_5 object:
+mean_1_5
+
+# To evaluate/run the code in this chunk, put your cursor inside it and use one of the following keyboard shortcuts: Ctrl+Shift+Enter on a PC or Command+Shift+Enter on a Mac.
+```
+
+Notice how the code chunk is separated from the main markdown text: it starts on a new line, beginning with three acute accent symbols (the key next to the 1 on your keyboard). This is followed directly by curly braces with an 'r inside. Actual R code begins on the next line, and the code chunk is completed by typing another three acute accents. 
+
+One way to insert a new R code chunk is by clicking the insert button (it has a green square with a white 'c' inside) then 'R'. You should get used to the keyboard shortcut instead, though, which is Ctrl+Shift+I on a PC or Command+Option+I on a Mac.
+
+Try it out! Insert a code chunk below this paragraph. Then, see if you can create an object called 'sum_10_20' that equals the sum of the integers from 10 to 20. Write 'sum_10_20' on the next line so that the result prints out when you run the code in the chunk or knit the document.
+
+
+
+
+
+Afterwards, to knit (compile) the document, place your cursor anywhere in this editing window and press Ctrl+Shift+K on a PC or Command+Shift+K on a Mac. After a few seconds you should see the document pop up.
+
+
+
