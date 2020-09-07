@@ -4,9 +4,11 @@ output: html_document
 ---
 
 
-## R Markdown
+## R Markdown Basics
 
-This file type is called R Markdown. It allows you to both do data analysis with R *and* write up the process, results, etc. The file can be compiled into a nice-looking document, great for sharing results (and submitting assignments). For now, we'll knit to HTML documents for simplicity. Eventually, we'll knit to PDF format as well.
+This is an R Markdown file (.Rmd file extension). It allows you to both do data analysis with R *and* write up the process, results, etc. The file can be compiled into a nice-looking document, great for sharing results (and submitting assignments). For now, we'll knit to HTML documents for simplicity. Eventually, we'll knit to PDF format as well.
+
+
 
 The main components of an R Markdown file are the header (at the very top), markdown text (regular writing like this paragraph), and code chunks (where we write R code to conduct analyses). Here is a code chunk example:
 
@@ -14,7 +16,7 @@ The main components of an R Markdown file are the header (at the very top), mark
 # lines that start with a '#' are comments, used to describe code
 
 # create an object called mean_1_5, which is the mean of the integers 1-5:
-mean_1_5 <- mean(1:5) 
+mean_1_5 <- mean(1:5)
 
 # output the newly-created mean_1_5 object:
 mean_1_5
@@ -30,7 +32,21 @@ Try it out! Insert a code chunk below this paragraph. Then, see if you can creat
 
 
 
+## Packages
 
+Packages are like apps for R that expand its functionality. They need to be installed just once on your computer. As an example, you can install the `gapminder` package by typing `install.packages("gapminder")` into the console (bottom left quadrant of RStudio) and pressing enter on your keyboard. You should not include package installation code in an R Markdown file/code chunk, though, because then it would re-install the package each time you compiled the document.
+
+Packages need to be loaded before each use. Usually, code that loads necessary packages is included in a code chunk at the top of an R Markdown file. We'll just load the `gapminder` package right here, though:
+
+```{r}
+# Loading the gapminder package (but not installing it here)
+
+library(gapminder)
+```
+
+
+
+## Knitting
 
 Afterwards, to knit (compile) the document, place your cursor anywhere in this editing window and press Ctrl+Shift+K on a PC or Command+Shift+K on a Mac. After a few seconds you should see the document pop up.
 
